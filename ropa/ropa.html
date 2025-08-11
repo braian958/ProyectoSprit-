@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mega Menú con Imagen</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  /* Circulo de color */
+  .color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #ccc;
+  }
+</style>
+
+<div class="card position-relative" style="width: 18rem;">
+  
+  <!-- Letrero de descuento -->
+  <span class="badge bg-danger position-absolute top-0 start-0 m-2">-20%</span>
+
+  <!-- Imagen -->
+  <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Producto">
+
+  <!-- Cuerpo -->
+  <div class="card-body">
+    
+    <!-- Título e icono -->
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="card-title mb-0">Nombre Producto</h5>
+      <i class="bi bi-heart"></i>
+    </div>
+
+    <!-- Selector de color -->
+    <div class="mb-2">
+      <span class="color-circle" style="background-color: red;"></span>
+      <span class="color-circle" style="background-color: blue;"></span>
+      <span class="color-circle" style="background-color: black;"></span>
+    </div>
+
+    <!-- Selector de tallas -->
+    <div class="mb-3">
+      <button class="btn btn-sm btn-outline-secondary">S</button>
+      <button class="btn btn-sm btn-outline-secondary">M</button>
+      <button class="btn btn-sm btn-outline-secondary">L</button>
+    </div>
+
+    <!-- Precios -->
+    <div class="d-flex align-items-center">
+      <span class="text-muted text-decoration-line-through me-2">$50.000</span>
+      <span class="fw-bold text-danger">$40.000</span>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+</body>
+</html>
