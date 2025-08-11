@@ -12,34 +12,76 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary " id="navbar">
+    <nav class="navbar navbar-expand-lg #20c997">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active  text-dark font-monospace" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">Nuevos lanzamientos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  text-dark" href="#">Features</a>
+                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            SALE
+                            <div class="dropdown-menu p-2" id="menu-d">
+                                <div class="d-flex align-items-center">
+                                    <img src="/assets/img/chauqeta.webp" alt="Imagen"
+                                        style="width: 200px; height: 300px; object-fit: cover; margin-right: 16px;">
+                                    <div>
+                                        <a class="dropdown-item" href="#">Vestiodos</a>
+                                        <a class="dropdown-item" href="#">Camisas</a>
+                                        <a class="dropdown-item" href="#">Pantalones</a>
+                                        <a class="dropdown-item" href="#">Chaquetas</a>
+                                        <a class="dropdown-item" href="#">Jeans</a>
+                                        <a class="dropdown-item" href="#">Shorts</a>
+                                        <a class="dropdown-item" href="#">Busos y tejidos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Pricing</a>
+                        <a class="nav-link" href="#">BLOG</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled  text-dark" aria-disabled="true">Disabled</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            PRENDAS
+                            <div class="dropdown-menu p-2">
+                                <div class="d-flex align-items-center">
+                                    <img src="/assets/img/chauqeta.webp" alt="Imagen"
+                                        style="width: 200px; height: 300px; object-fit: cover; margin-right: 16px;">
+                                    <div>
+                                        <a class="dropdown-item" href="#">Vestiodos</a>
+                                        <a class="dropdown-item" href="#">Camisas</a>
+                                        <a class="dropdown-item" href="#">Pantalones</a>
+                                        <a class="dropdown-item" href="#">Chaquetas</a>
+                                        <a class="dropdown-item" href="#">Jeans</a>
+                                        <a class="dropdown-item" href="#">Shorts</a>
+                                        <a class="dropdown-item" href="#">Busos y tejidos</a>
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </li>
+
                 </ul>
             </div>
         </div>
     </nav>
 
     <div id="descuentos">
-        <p>descuentos hasta del 60% </p>
+        <p>¡Animate! Tenemos Descuentos de hasta el 60% </p>
+        <p>¡No te lo pierdas! Ven y enamorate de nuestras colecciones</p>
     </div>
 
     <section class="hero-section">
@@ -54,12 +96,11 @@
 
         <div class="content">
             <h1 class="display-4">Bienvenida a Esprit</h1>
-            <p class="lead">La moda empieza por cómo te sentís.En Esprit, cada prenda está diseñada para resaltar tu
-                estilo, tu energía y tu autenticidad.Renová tu clóset con piezas que hablan por vos.Descubrí la
-                colección y llevá tu estilo al siguiente nivel.</p>
+            <p class="lead">La moda empieza por cómo te sientes.En Esprit, cada día diseñamos prendas para resaltar tu
+                estilo, tu energía y tu autenticidad.Renueva tu clóset con diseños creados especialmente para ti.Descubre la
+                colección y enamorate de tu estilo y llévalo al siguiente nivel.</p>
         </div>
     </section>
-
 
 
 
@@ -68,9 +109,8 @@
         <img src="/assets/img/fondo.webp" class="img-fluid" alt="vestido" id="img-2">
         <img src="/assets/img/fondo.webp" class="img-fluid" alt="pantalon" id="img-3">
         <img src="/assets/img/fondo.webp" class="img-fluid" alt="camisa" id="img-4">
-    
+
     </div>
-    
 
     <script src="/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"

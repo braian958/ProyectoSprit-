@@ -11,13 +11,44 @@ body {
 }
 
 #descuentos {
-    background-color: rgba(229, 149, 0, 0.259);
-    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
     text-align: center;
-    height: 30px;
+    height: 35px; /* Ajusta según tu diseño */
     padding: 2px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+#descuentos p {
+  position: absolute;
+  left: 0;
+  white-space: nowrap;
+  animation: caruselDescuentoIzqDer 10s linear infinite;
+}
+
+@keyframes caruselDescuentoIzqDer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+#descuntos p {
+    transition: all carrusel 0.5s ease;
+}
+
+@keyframes carrusel {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 
@@ -93,10 +124,35 @@ body {
 .content {
     margin-top: 0%;
     position: relative;
+    font-family: cursive;
 }
 
 .content p {
     margin-top: 3%;
    margin-left: 20%;
    margin-right: 20%;
+}
+
+.navbar {
+   background-color: rgba(238, 217, 196, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.dropdown-menu {
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  display: block !important;
+}
+
+.dropdown:hover .dropdown-menu  {
+  transform: scaleX(1);
+  opacity: 1;
+  pointer-events: auto;
 }
