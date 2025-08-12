@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg #20c997">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
@@ -25,7 +24,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Nuevos lanzamientos</a>
                     </li>
                     <li class="nav-item">
-                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             SALE
                             <div class="dropdown-menu p-2" id="menu-d">
@@ -64,10 +63,6 @@
                                         <a class="dropdown-item" href="#">Jeans</a>
                                         <a class="dropdown-item" href="#">Shorts</a>
                                         <a class="dropdown-item" href="#">Busos y tejidos</a>
-
-
-
-
                                     </div>
                                 </div>
                             </div>
@@ -78,39 +73,79 @@
             </div>
         </div>
     </nav>
-
     <div id="descuentos">
         <p>¡Animate! Tenemos Descuentos de hasta el 60% </p>
         <p>¡No te lo pierdas! Ven y enamorate de nuestras colecciones</p>
     </div>
-
     <section class="hero-section">
         <div class="overlay"></div>
-
         <video class="video-background" autoplay muted loop playsinline>
             <source
                 src="/assets/videos/Vístete como vives- con calma.Piezas livianas en tonos tierra, perfecto para los días sin afán. .mp4"
                 type="video/mp4">
             Tu navegador no soporta el video HTML5.
         </video>
-
         <div class="content">
             <h1 class="display-4">Bienvenida a Esprit</h1>
             <p class="lead">La moda empieza por cómo te sientes.En Esprit, cada día diseñamos prendas para resaltar tu
-                estilo, tu energía y tu autenticidad.Renueva tu clóset con diseños creados especialmente para ti.Descubre la
+                estilo, tu energía y tu autenticidad.Renueva tu clóset con diseños creados especialmente para
+                ti.Descubre la
                 colección y enamorate de tu estilo y llévalo al siguiente nivel.</p>
         </div>
     </section>
-
-
-
-    <div class="cont-s">
-        <img src="/assets/img/chauqeta.webp" class="img-fluid" alt="chaqueta" id="img-1">
-        <img src="/assets/img/fondo.webp" class="img-fluid" alt="vestido" id="img-2">
-        <img src="/assets/img/fondo.webp" class="img-fluid" alt="pantalon" id="img-3">
-        <img src="/assets/img/fondo.webp" class="img-fluid" alt="camisa" id="img-4">
-
+    <div class="container" id="contenedor-imagenes">
+        <div class="row g-3">
+            <div class="col-4" id="producto-1">
+                <div class="position-relative">
+                    <img src="/assets/img/chaquetas.webp" class="img-fluid " alt="Producto 1" id="img-producto-1">
+                    <a href="#comprar" class="btn position-absolute top-50 start-50 translate-middle" id="ver-producto-1">
+                        Ver prendas
+                    </a>
+                </div>
+            </div>
+            <div class="col-4" id="producto-2">
+                <div class="position-relative">
+                    <img src="/assets/img/camisas2.webp" class="img-fluid " alt="Producto 2" id="img-producto-2">
+                    <a href="#comprar" class="btn position-absolute top-50 start-50 translate-middle" id="ver-producto-2">
+                        Ver prendas
+                    </a>
+                </div>
+            </div>
+            <div class="col-4" id="producto-3">
+                <div class="position-relative">
+                    <img src="/assets/img/jeans.webp" class="img-fluid " alt="Producto 3" id="img-producto-3">
+                    <a href="#comprar" class="btn  position-absolute top-50 start-50 translate-middle" id="ver-producto-3">
+                        Ver prendas
+                    </a>
+                </div>
+            </div>
+            <div class="col-4" id="producto-4">
+                <div class="position-relative">
+                    <img src="/assets/img/vestidos2.webp" class="img-fluid" alt="Producto 3" id="img-producto-4">
+                    <a href="#comprar" class="btn   position-absolute top-50 start-50 translate-middle" id="ver-producto-4">
+                        Ver prendas
+                    </a>
+                </div>
+            </div>
+            <div class="col-4" id="producto-5">
+                <div class="position-relative">
+                    <img src="/assets/img/falda.webp" class="img-fluid" alt="Producto 3" id="img-producto-5">
+                    <a href="#comprar" class="btn   position-absolute top-50 start-50 translate-middle" id="ver-producto-5">
+                        Ver prendas
+                    </a>
+                </div>
+            </div>
+            <div class="col-4" id="producto-6">
+                <div class="position-relative">
+                    <img src="/assets/img/shorts2.webp" class="img-fluid" alt="Producto 3" id="img-producto-6">
+                    <a href="#comprar" class="btn position-absolute top-50 start-50 translate-middle" id="ver-producto-6">
+                        Ver prendas
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <script src="/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
