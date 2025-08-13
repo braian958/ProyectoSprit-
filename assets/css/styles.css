@@ -1,13 +1,13 @@
-body {
-    background: #ffe5f0;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
 #textoEncima {
     margin-top: 3%;
     margin-left: 25%;
+}
+
+video {
+    object-fit: cover;
+    object-position: top;
+    aspect-ratio: top;
 }
 
 #descuentos {
@@ -60,7 +60,7 @@ body {
 #contenedor-imagenes {
     background-color: white;
     margin-top: 60px;
-    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.382);
 }
 
 .cont-s {
@@ -117,8 +117,10 @@ body {
 }
 
 .navbar {
-   background-color: rgba(238, 217, 196, 0.9);
+   background-color: #ffe6b898;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    text-align: center;
 }
 
 .dropdown-toggle::after {
@@ -140,201 +142,107 @@ body {
   pointer-events: auto;
 }
 
-#ver-producto-1 {
-    background-color: #ffffff38;
-    padding: 8px;
-    font-size: 19px;
-    color: rgb(0, 0, 0);
-    border-radius: 0px;
-    height: 50px;
-    width: 400px;
+#ver-producto {
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center; 
+    gap: 20px;               
+    padding: 20px;
+}
+
+#ver-producto div {
+    max-width: 300px;          
+}
+
+#ver-producto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+ /* Contenedor general */
+#ver-producto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+/* Cada bloque para posicionar el botón */
+#ver-chaqueta,
+#ver-camisas,
+#ver-jeans,
+#ver-faldas {
+    position: relative; 
+}
+
+
+#btn-chaqueta,
+#btn-camisas,
+#btn-jean,
+#btn-faldas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 70%;
+    border-radius: 0;
+    text-align: center;
 }
 
-#ver-producto-1:hover {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+#btn-chaqueta,
+#btn-camisas,
+#btn-jean,
+#btn-faldas {
+    font-family: cursive;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    
 }
 
-#img-producto-1 {
+#img-chaqueta,
+#img-camisas,
+#img-jean,
+#img-faldas {
+    box-shadow: 1px 1px 1px black;
+} 
+
+#img-chaqueta:hover,
+#img-camisas:hover,
+#img-jean:hover,
+#img-faldas:hover {
+    opacity: 0.6;
     transition: opacity 0.3s ease;
 }
 
-#img-producto-1:hover {
-    opacity: 0.8;
-}
 
-#producto-1 {
-    transition: opacity 0.3s ease;
-}
-
-#producto-1:hover #ver-producto-1 {
+#ver-chaqueta:hover #btn-chaqueta,
+#ver-camisas:hover #btn-camisas,
+#ver-jeans:hover #btn-jean,
+#ver-faldas:hover #btn-faldas {
     opacity: 1;
 }
 
-#ver-producto-2 {
-    background-color: #ffffff41;
-    padding: 8px;
-    font-size: 19px;
-    color: rgb(0, 0, 0);
-    border-radius: 0px;
-    height: 50px;
-    width: 400px;
-    opacity: 0;
-}
-
-#ver-producto-2:hover {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-}
-
-#img-producto-2 {
-    height:637px;
-    transition: opacity 0.3s ease;
-}
-
-#img-producto-2:hover {
-    opacity: 0.8;
-}
-
-#producto-2 {
-    transition: opacity 0.3s ease;
-}
-
-#producto-2:hover #ver-producto-2 {
-    opacity: 1;
-}
-
-#ver-producto-3 {
-    background-color: #ffffff3b;
-    padding: 8px;
-    font-size: 19px;
-    color: rgb(0, 0, 0);
-    border-radius: 0px;
-    height: 50px;
-    width: 400px;
-    opacity: 0;
-}
-
-#ver-producto-3:hover {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-}
-
-#img-producto-3 {
-    height:637px;
-    transition: opacity 0.3s ease;
-}
-
-#img-producto-3:hover {
-    opacity: 0.8;
-}
-
-#producto-3 {
-    transition: opacity 0.3s ease;
-}
-
-#producto-3:hover #ver-producto-3 {
-    opacity: 1;
-}
-
-#ver-producto-4 {
-    background-color: #ffffff3c;
-    padding: 8px;
-    font-size: 19px;
-    color: rgb(0, 0, 0);
-    border-radius: 0px;
-    height: 50px;
-    width: 400px;
-    opacity: 0;
-}
-
-#ver-producto-4:hover {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-}
-
-#img-producto-4 {
-    height:637px;
-    transition: opacity 0.3s ease;
-}
-
-#img-producto-4:hover {
-    opacity: 0.8;
-}
-
-#producto-4 {
-    transition: opacity 0.3s ease;
-}
-
-#producto-4:hover #ver-producto-4 {
-    opacity: 1;
+#btn-chaqueta:hover,
+#btn-camisas:hover,
+#btn-jean:hover,
+#btn-faldas:hover {
+    background-color: black;
+    color: white;
 }
 
 
 
-#ver-producto-5 {
-    background-color: #ffffff3c;
-    padding: 8px;
-    font-size: 19px;
-    color: rgb(0, 0, 0);
-    border-radius: 0px;
-    height: 50px;
-    width: 400px;
-    opacity: 0;
-}
 
-#ver-producto-5:hover {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-}
 
-#img-producto-5 {
-    height:637px;
-    transition: opacity 0.3s ease;
-}
 
-#img-producto-5:hover {
-    opacity: 0.8;
-}
 
-#producto-5 {
-    transition: opacity 0.3s ease;
-}
 
-#producto-5:hover #ver-producto-5{
-    opacity: 1;
-}
 
-#ver-producto-6 {
-   background-color: #ffffff3c;
-    padding: 8px;
-    font-size: 19px;
-    color: rgb(0, 0, 0);
-    border-radius: 0px;
-    height: 50px;
-    width: 400px;
-    opacity: 0;
-}
 
-#ver-producto-6:hover {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-}
 
-#img-producto-6 {
-    height:637px;
-    transition: opacity 0.3s ease;
-}
 
-#img-producto-6:hover {
-    opacity: 0.8;
-}
-
-#producto-6 {
-    transition: opacity 0.3s ease;
-}
-
-#producto-6:hover #ver-producto-6 {
-    opacity: 1;
-}
