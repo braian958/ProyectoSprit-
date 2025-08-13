@@ -1,13 +1,115 @@
-body{
-    background-color: beige;
+body {
+    font-family: Arial, sans-serif;
+    background: url('') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.registro-container {
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 350px;
+}
+.registro-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #2d2d2d;
+    animation: fadeSlideDown 1s ease;
 }
 
-.registro {
-    width: 40%;
-    height: 500px;
-    background-color: rgb(255, 255, 255);
-    margin-top: 10%;
-    transform: translate(100%, 0);
-    padding: 20px;
-    border-radius: 5px;
+@keyframes fadeSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #444;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1.5px solid #ccc;
+    border-radius: 4px;
+    background-color: #fafbfc;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #1e90ff;
+    outline: none;
+    background-color: #e6f2ff;
+}
+input[type="tel"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1.5px solid #1e90ff;
+    border-radius: 4px;
+    background-color: #f0f8ff;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+input[type="tel"]:focus {
+    border-color: #156fc1;
+    outline: none;
+    background-color: #e6f2ff;
+    
+}
+button {
+    width: 100%;
+    padding: 0.7rem;
+    background: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+button:hover {
+    background: #ffd900;
+}
+.login-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: #0080ff;
+    text-decoration: none;
+}
+#mensaje {
+    margin-top: 1rem;
+    text-align: center;
+    color: green;
+}
+#mensaje.error {
+    color: red;
+}
+#mensaje.success {
+    color: green;
+}
+#mensaje {
+    margin-top: 1rem;
+    text-align: center;
+    color: green;
+}
+
+.logo {
+    display: block;
+    width: 450px;
+    height: auto;
+    animation: fadeSlideDown 1s ease;
+    border-radius: 8px;
+    
 }
