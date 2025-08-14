@@ -7,7 +7,7 @@ document.getElementById('registroForm').addEventListener('submit', function(e) {
     const mensaje = document.getElementById('mensaje');
 
     if (nombre && email && password && telefono) {
-        mensaje.textContent = '¡Registro exitoso! Bienvenido a Sprint.';
+        mensaje.textContent = '¡Registro exitoso! Bienvenido a Esprit.';
         mensaje.style.color = 'green';
         this.reset();
     } else {
@@ -26,3 +26,4 @@ document.addEventListener('DOMContentLoaded', function() {
         logo.style.transform = 'translateY(0)';
     }   , 100);
 });
+

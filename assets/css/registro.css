@@ -1,20 +1,48 @@
 body {
-    font-family: Arial, sans-serif;
-    background: url('') no-repeat center center fixed;
+    background-color: #000000; /* Color de fondo suave */
+    background-image: url('../img/download\ \(1\).jpg'); /* Ajusta la ruta si es necesario */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
+
 .registro-container {
+    display: flex;
     background: #fff;
-    padding: 2rem 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    width: 350px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25); /* Sombra más notoria */
+    overflow: hidden;
+    max-width: 750px;
+    margin:auto ;
 }
-.registro-container h2 {
+
+/* Imagen a la izquierda */
+.registro-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Formulario a la derecha */
+.registro-formulario {
+    flex: 1;
+    padding: 2rem 2.5rem;
+}
+
+.registro-formulario h2 {
     text-align: center;
     margin-bottom: 1.5rem;
     color: #2d2d2d;
@@ -31,15 +59,21 @@ body {
         transform: translateY(0);
     }
 }
+
 .form-group {
     margin-bottom: 1rem;
 }
+
 label {
     display: block;
     margin-bottom: 0.3rem;
     color: #444;
 }
-input[type="text"], input[type="email"], input[type="password"] {
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="tel"] {
     width: 100%;
     padding: 0.5rem;
     border: 1.5px solid #ccc;
@@ -47,40 +81,30 @@ input[type="text"], input[type="email"], input[type="password"] {
     background-color: #fafbfc;
     transition: border-color 0.3s, background-color 0.3s;
 }
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-    border-color: #1e90ff;
+
+input:focus {
+    border-color: #0099ff;
     outline: none;
-    background-color: #e6f2ff;
+    background-color: #ffffff;
 }
-input[type="tel"] {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1.5px solid #1e90ff;
-    border-radius: 4px;
-    background-color: #f0f8ff;
-    transition: border-color 0.3s, background-color 0.3s;
-}
-input[type="tel"]:focus {
-    border-color: #156fc1;
-    outline: none;
-    background-color: #e6f2ff;
-    
-}
+
 button {
     width: 100%;
     padding: 0.7rem;
     background: #000000;
-    color: #fff;
+    color: #fff2f2;
     border: none;
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
-button:hover {
-    background: #ffd900;
+
+button:hover {  
+    background: #00b7ff;
+    transition: background-color 0.3s;
 }
+
 .login-link {
     display: block;
     text-align: center;
@@ -88,28 +112,26 @@ button:hover {
     color: #0080ff;
     text-decoration: none;
 }
-#mensaje {
-    margin-top: 1rem;
-    text-align: center;
-    color: green;
-}
-#mensaje.error {
-    color: red;
-}
-#mensaje.success {
-    color: green;
-}
+
 #mensaje {
     margin-top: 1rem;
     text-align: center;
     color: green;
 }
 
-.logo {
-    display: block;
-    width: 450px;
-    height: auto;
-    animation: fadeSlideDown 1s ease;
-    border-radius: 8px;
-    
+#mensaje.error {
+    color: red;
+}
+
+#mensaje.success {
+    color: green;
+}
+
+@media (max-width: 768px) {
+    .registro-container {
+        flex-direction: column;
+    }
+    .logo {
+        height: 250px;
+    }
 }
