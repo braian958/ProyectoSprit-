@@ -1,4 +1,7 @@
-
+body {
+    padding: 0;
+    margin: 0;
+}
 #textoEncima {
     margin-top: 3%;
     margin-left: 25%;
@@ -145,9 +148,10 @@ video {
 #ver-producto {
     display: flex;
     flex-wrap: wrap;    
-    justify-content: center; 
     gap: 20px;               
     padding: 20px;
+    background-color: rgba(255, 221, 217, 0.389);
+    min-height: 400px;
 }
 
 #ver-producto div {
@@ -155,10 +159,30 @@ video {
 }
 
 #ver-producto img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 10px;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 10px;
+}
+
+/* Responsive background for #ver-producto */
+@media (max-width: 991px) {
+    #ver-producto {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center top;
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    #ver-producto {
+        background-attachment: scroll;
+        background-size: contain;
+        background-position: top center;
+        min-height: 200px;
+        padding: 10px;
+    }
 }
 
  /* Contenedor general */
@@ -186,7 +210,7 @@ video {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    
     opacity: 0;
     transition: opacity 0.3s ease;
     width: 70%;
@@ -233,6 +257,95 @@ video {
 #btn-faldas:hover {
     background-color: black;
     color: white;
+}
+
+.carousel-container {
+  width: 80%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  min-width: 250px;
+  
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  height: 400px;
+  position: relative;
+  z-index: 1; /* cards en nivel normal */
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10; /* botones encima de las cards */
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+.prev-btn:hover,
+.next-btn:hover{
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#btn-registrate:hover {
+    background-color: #000000;
+    border-radius: 0;
+}
+
+#registrate {
+    height: 700px;
+    width: 100%;
+}
+
+#registrate img {
+    height: 700px;
+    max-width: 100%;
+}
+
+#pagos-m {
+    height: 150px;
+    width: 100%;
+}
+
+#pagos-m img {
+    height: 150px;
+    width: 100%;
+}
+
+footer {
+    background-color: #ffeac2;
+    color: #000000;
+    padding: 10px ;
+    font-family: Arial, sans-serif;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 2px solid #5353537a;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
 }
 
 
