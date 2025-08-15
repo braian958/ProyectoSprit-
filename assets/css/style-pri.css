@@ -38,21 +38,6 @@ nav ul li:hover {
     display: block;
 }
 
-.mega-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 600px;
-    background: hsla(0, 0%, 100%, 0.918);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.075);
-    padding: 20px;
-    z-index: 100;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
-    border-radius: 0 10px 10px 10px;
-}
-
 nav ul li:hover .mega-menu {
     display: grid;
 }
@@ -99,7 +84,6 @@ nav ul li:hover .mega-menu {
     display: block;
 }
 
-
 @media (max-width: 767px) {
 
     .mega-menu {
@@ -112,25 +96,28 @@ nav ul li:hover .mega-menu {
         padding: 10px;
     }
 
-    /* Quitar línea divisoria en móvil */
     .mega-menu .categorias {
         border-right: none;
         padding-right: 0;
     }
 
-    /* Hacer que la imagen se ajuste */
     .mega-menu .imagen img {
         width: 100%;
-        height: auto; /* Mantiene proporciones */
-        max-height: 300px; /* Límite de altura opcional */
-        object-fit: cover; /* Ajusta la imagen al espacio */
+        height: auto; 
+        max-height: 300px; 
+        object-fit: cover; 
     }
 
-    /* Mostrar submenú al tocar/click en móvil */
     nav ul li:active .mega-menu,
     nav ul li:focus-within .mega-menu {
         display: grid;
     }
+} 
+.secc{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
 }
 
 /*div titulo*/
@@ -142,6 +129,33 @@ nav ul li:hover .mega-menu {
     font-family: 'Playfair Display', serif;
     background-color: #ffffff;
     font-size: 20px;
+}
+/*imagenes de la ropa*/
+
+.entrada-ima {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.entrada-ima .portada {
+    width: 100%;
+    max-width: 350px; 
+    height: auto;
+    border-radius: 200px;
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    .entrada-ima {
+        overflow-x: auto;
+        flex-wrap: nowrap; 
+    }
+    .entrada-ima .portada {
+        max-width: 200px;
+        flex: 0 0 auto;
+    }
 }
 
 /*carrusel*/
@@ -295,7 +309,6 @@ nav ul li:hover .mega-menu {
     transform: translate(-50%, 0);
 }
 
-/* 📱 Móviles pequeños */
 @media (max-width: 576px) {
     .boton-sobre-img {
         padding: 0.4em 1em;
@@ -303,7 +316,6 @@ nav ul li:hover .mega-menu {
     }
 }
 
-/* 💻 Pantallas grandes */
 @media (min-width: 1200px) {
     .boton-sobre-img {
         padding: 0.8em 1.5em;
@@ -407,7 +419,6 @@ margin: 0 auto;
 }
 }
 
-
 @media (max-width: 576px) {
 nav ul {
 flex-direction: column;
@@ -416,18 +427,15 @@ align-items: center;
 nav ul li {
 padding: 10px;
 }
-/* Mega menú más compacto */
 .mega-menu {
 padding: 10px;
 }
 .mega-menu .categorias a {
 font-size: 12px;
 }
-/* Texto */
 .esprit-text p {
 font-size: 14px;
 }
-/* Ajuste de imágenes */
 .img-zoom img {
 height: auto;
 padding: 10px;
