@@ -3,11 +3,6 @@ body {
     padding-top: 30px;
 }
 
-
-.fa{
-    margin: 0%;
-}
-
 /*nav*/
 nav {
     padding: 10px 20px;
@@ -62,6 +57,25 @@ nav ul li:hover .mega-menu {
     display: grid;
 }
 
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 600px;
+    background: hsla(0, 0%, 100%, 0.918);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.075);
+    padding: 20px;
+    z-index: 100;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    border-radius: 0 10px 10px 10px;
+}
+
+nav ul li:hover .mega-menu {
+    display: grid;
+}
+
 .mega-menu .categorias {
     border-right: 1px solid #66666627;
     padding-right: 10px;
@@ -79,11 +93,44 @@ nav ul li:hover .mega-menu {
     text-decoration: underline;
 }
 
-/* Imagen */
 .mega-menu .imagen img {
     width: 400px;
     height: 350px;
     display: block;
+}
+
+
+@media (max-width: 767px) {
+
+    .mega-menu {
+        position: static; 
+        width: 100%;
+        grid-template-columns: 1fr; 
+        gap: 10px;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 10px;
+    }
+
+    /* Quitar línea divisoria en móvil */
+    .mega-menu .categorias {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    /* Hacer que la imagen se ajuste */
+    .mega-menu .imagen img {
+        width: 100%;
+        height: auto; /* Mantiene proporciones */
+        max-height: 300px; /* Límite de altura opcional */
+        object-fit: cover; /* Ajusta la imagen al espacio */
+    }
+
+    /* Mostrar submenú al tocar/click en móvil */
+    nav ul li:active .mega-menu,
+    nav ul li:focus-within .mega-menu {
+        display: grid;
+    }
 }
 
 /*div titulo*/
@@ -146,6 +193,20 @@ nav ul li:hover .mega-menu {
     line-height: 1.1;
 }
 
+.img-zoom img {
+    width: 100%;
+    height: 600%;
+    object-fit: cover;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #ffdede5e;
+} 
+
+.ajuste{
+    background-color:#ffdede5e ;
+}
+
+
 .esprit-text p {
     font-size: 16px;
     line-height: 1.6;
@@ -158,42 +219,12 @@ nav ul li:hover .mega-menu {
     align-items: flex-start; 
 }
 
-.card {
-    flex-shrink: 1; 
-    margin-top: 30px;
-}
-
-.cards-columna {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; 
-}
-
-
-.img-zoom img {
-    width: 100%;
-    height: 600%;
-    object-fit: cover;
-    overflow: hidden;
-    padding: 20px;
-    background-color: #ffdede5e;
-}
-
-.co{
-    background-color: #ffdede5e;
-}
-
 .seccion-con-fondo {
     background-image: url('/assets/img/fondo_seccion.avif');
     background-size: cover;      
     background-position: center; 
 }
 
-/* .seccion-con-fondo-2 {
-    background-image: url('https://png.pngtree.com/background/20220731/original/pngtree-white-background-texture-advertising-picture-image_1909274.jpg');
-    background-size: cover;      
-    background-position: center; 
-} */
 
 /* empieza la ropa*/
 .alineacion{
@@ -206,45 +237,90 @@ nav ul li:hover .mega-menu {
     border-style: solid;
     border-color: white;
 }
-
-
 .card {
-    border-radius: 10px;    
+    flex-shrink: 1; 
+    margin-top: 30px;  
     overflow: hidden;
     font-size: 15px;
-    font-family: 'Playfair Display', serif;    
+    font-family: 'Playfair Display', serif; 
 }
 
+.cards-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
 .card-img-container {
     position: relative;
     overflow: hidden; 
 }
 
+
 .zoom-img {
     transition: transform 0.5s ease;
-    display: block;
 }
 
-.zoom-img:hover {
-    transform: scale(1.2);
+.zoom-img {
+    transition: transform 0.3s ease;
+}
+
+.card-img-container:hover .zoom-img {
+    transform: scale(1.1);
+}
+
+.card-img-container {
+    position: relative;
 }
 
 .boton-sobre-img {
     position: absolute;
-    top: 370px;   
-    right: 90px;   
-    z-index: 2; 
+    width: 130px;
+    height: 80px;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    background-color: rgba(202, 0, 0, 0.76) !important;
+    color: #fff !important;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    font-family: 'Playfair Display', serif;
+    padding: 0.6em 1.2em; /* Relativo para adaptarse */
+    font-size: clamp(0.8rem, 2vw, 1rem); /* Cambia según tamaño de pantalla */
+    border: none;
+    border-radius: 6px;
 }
 
-.mi-boton {
-    background-color: #ffe9c0 !important;
-    border-color: #ffe9c0 !important;     
-    color: rgb(0, 0, 0) !important;         
+.card-img-container:hover .boton-sobre-img {
+    opacity: 1;
+    transform: translate(-50%, 0);
 }
 
-.mi-boton:hover {
-    background-color: #fccf70 !important; 
-    border-color: #fccf70 !important;
+/* 📱 Móviles pequeños */
+@media (max-width: 576px) {
+    .boton-sobre-img {
+        padding: 0.4em 1em;
+        font-size: 0.8rem;
+    }
+}
+
+/* 💻 Pantallas grandes */
+@media (min-width: 1200px) {
+    .boton-sobre-img {
+        padding: 0.8em 1.5em;
+        font-size: 1rem;
+    }
+}
+
+.tallas {
+    background-color: #ffffff !important;
+    border-color: #000000 !important;     
+    color: #000000 !important;
+    transition: all 0.3s ease; 
+}
+
+.tallas:hover {
+    background-color: #000000 !important; 
+    color: #ffffff !important; 
 }
 
 .descuento{
@@ -266,7 +342,6 @@ footer {
     color: #000000;
     padding: 10px ;
     font-family: Arial, sans-serif;
-    margin-top: 10%;
 }
 
 .footer-bottom {
@@ -275,4 +350,86 @@ footer {
     border-top: 2px solid #5353537a;
     font-size: 20px;
     font-family: 'Playfair Display', serif;
+}
+
+
+@media (max-width: 992px) {
+/* Menú */
+.mega-menu {
+width: 100%;
+grid-template-columns: 1fr;
+}
+.mega-menu .imagen img {
+width: 100%;
+height: auto;
+}
+/* Esprit contenedor */
+.esprit-contenedor {
+flex-direction: column;
+align-items: center;
+}
+.esprit-banner {
+height: auto;
+background-position: center;
+}
+.esprit-text {
+width: 100%;
+padding: 20px;
+text-align: center;
+}
+.boton-sobre-img {
+top: auto;
+bottom: 20px;
+right: 50%;
+transform: translateX(50%);
+}
+}
+
+
+@media (max-width: 768px) {
+.esprit-text h1 {
+font-size: 36px;
+margin: 20px 0;
+}
+.esprit-meta {
+flex-direction: column;
+align-items: center;
+gap: 5px;
+}
+/* Carrusel */
+.carousel-inner img {
+height: auto;
+}
+/* Tarjetas */
+.card {
+width: 100% !important;
+margin: 0 auto;
+}
+}
+
+
+@media (max-width: 576px) {
+nav ul {
+flex-direction: column;
+align-items: center;
+}
+nav ul li {
+padding: 10px;
+}
+/* Mega menú más compacto */
+.mega-menu {
+padding: 10px;
+}
+.mega-menu .categorias a {
+font-size: 12px;
+}
+/* Texto */
+.esprit-text p {
+font-size: 14px;
+}
+/* Ajuste de imágenes */
+.img-zoom img {
+height: auto;
+padding: 10px;
+}
 }
