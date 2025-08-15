@@ -11,68 +11,93 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg #20c997">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Nuevos lanzamientos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            SALE
-                            <div class="dropdown-menu p-2" id="menu-d">
-                                <div class="d-flex align-items-center">
-                                    <img src="/assets/img/chauqeta.webp" alt="Imagen"
-                                        style="width: 200px; height: 300px; object-fit: cover; margin-right: 16px;">
-                                    <div>
-                                        <a class="dropdown-item" href="#">Vestiodos</a>
-                                        <a class="dropdown-item" href="#">Camisas</a>
-                                        <a class="dropdown-item" href="#">Pantalones</a>
-                                        <a class="dropdown-item" href="#">Chaquetas</a>
-                                        <a class="dropdown-item" href="#">Jeans</a>
-                                        <a class="dropdown-item" href="#">Shorts</a>
-                                        <a class="dropdown-item" href="#">Busos y tejidos</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">BLOG</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            PRENDAS
-                            <div class="dropdown-menu p-2">
-                                <div class="d-flex align-items-center">
-                                    <img src="/assets/img/chauqeta.webp" alt="Imagen"
-                                        style="width: 200px; height: 300px; object-fit: cover; margin-right: 16px;">
-                                    <div>
-                                        <a class="dropdown-item" href="#">Vestiodos</a>
-                                        <a class="dropdown-item" href="#">Camisas</a>
-                                        <a class="dropdown-item" href="#">Pantalones</a>
-                                        <a class="dropdown-item" href="#">Chaquetas</a>
-                                        <a class="dropdown-item" href="#">Jeans</a>
-                                        <a class="dropdown-item" href="#">Shorts</a>
-                                        <a class="dropdown-item" href="#">Busos y tejidos</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
+    <nav class="navbar navbar-expand-lg w-100" style="background-color: beige">
+    <div class="container-fluid px-0">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="/assets/img/logosprit.png" alt="Logo" style="height: 70px;">
+        </a>
 
-                </ul>
-            </div>
+        <!-- Botón Hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto text-center align-items-lg-center justify-content-center w-100">
+                <!-- Nuevos lanzamientos -->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#nuevos-lanzamientos" style="font-size: 17px;">Nuevos lanzamientos</a>
+                </li>
+
+                <!-- SALE con dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="saleDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" style="font-size: 17px;">
+                        SALE
+                    </a>
+                    <div class="dropdown-menu p-2 text-center mx-auto" aria-labelledby="saleDropdown" style="left:50%;transform:translateX(-50%);">
+                        <div class="d-flex flex-column flex-lg-row align-items-center">
+                            <img src="/assets/img/camisas2.webp" alt="Imagen"
+                                style="width: 200px; height: 300px; object-fit: cover; margin-right: 16px;">
+                            <div>
+                                <a class="dropdown-item" href="#">Vestidos</a>
+                                <a class="dropdown-item" href="#">Camisas</a>
+                                <a class="dropdown-item" href="#">Pantalones</a>
+                                <a class="dropdown-item" href="#">Chaquetas</a>
+                                <a class="dropdown-item" href="#">Jeans</a>
+                                <a class="dropdown-item" href="#">Shorts</a>
+                                <a class="dropdown-item" href="#">Busos y tejidos</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- BLOG -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="font-size: 17px;">BLOG</a>
+                </li>
+
+                <!-- PRENDAS con dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="prendasDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" style="font-size: 17px;">
+                        PRENDAS
+                    </a>
+                    <div class="dropdown-menu p-2 text-center mx-auto" aria-labelledby="prendasDropdown" style="left:50%;transform:translateX(-50%);">
+                        <div class="d-flex flex-column flex-lg-row align-items-center">
+                            <img src="/assets/img//chaquetas.webp" alt="Imagen"
+                                style="width: 200px; height: 300px; object-fit: cover; margin-right: 16px;">
+                            <div>
+                                <a class="dropdown-item" href="#">Vestidos</a>
+                                <a class="dropdown-item" href="#">Camisas</a>
+                                <a class="dropdown-item" href="#">Pantalones</a>
+                                <a class="dropdown-item" href="#">Chaquetas</a>
+                                <a class="dropdown-item" href="#">Jeans</a>
+                                <a class="dropdown-item" href="#">Shorts</a>
+                                <a class="dropdown-item" href="#">Busos y tejidos</a>
+                                <a class="dropdown-item" href="/ropa/principal.html">Ver todo</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Iconos -->
+                <li class="nav-item d-flex align-items-center">
+                    <a href="/assets/html/iniciosesion.html" class="nav-link p-0">
+                        <img src="/assets/img/simboloinisiosesion.png" alt="Iniciar sesión" style="height: 60px;transform: translate(300px, 0px);">
+                    </a>
+                </li>
+                <li class="nav-item d-flex align-items-center">
+                    <img src="/assets/img/shopping_bag_add_icon_177353.png" alt="Carrito" style="height: 50px; width: 40px;transform: translate(300px, 0px);">
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
     <div id="formas-pago">
         <img src="/assets/img/formasdePago.webp" alt="Formas de pago" class="img-fluid">
@@ -109,18 +134,18 @@
     <div id="ver-camisas" class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column align-items-center mb-4">
     
             <img src="/assets/img/camisas2.webp" alt="" id="img-camisas" class="img-fluid" style="margin-top: 140px;">
-            <a href="" style="text-decoration: none; color: black; font-family: cursive;" id="ver-a">Camisas</a>
-            <a href="" class="btn" id="btn-camisas" style="transform: translate(-100px,140px);">Ver prenda</a>
+            <a href="/ropa/ropa2.html" style="text-decoration: none; color: black; font-family: cursive;" id="ver-a">Camisas</a>
+            <a href="/ropa/ropa2.html" class="btn" id="btn-camisas" style="transform: translate(-100px,140px);">Ver prenda</a>
         </div>
     <div id="ver-jeans" class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column align-items-center mb-4" style="margin-top: 100px;">
             <img src="/assets/img/jeans.webp" alt="" id="img-jean" class="img-fluid">
-            <a href="" style="text-decoration: none; color: black; font-family: cursive;">Jeans</a>
-            <a href="" class="btn" id="btn-jean" style="transform: translate(-105px,140px);">Ver prenda</a>
+            <a href="/ropa/ropa3.html" style="text-decoration: none; color: black; font-family: cursive;">Pantalones y Jeans</a>
+            <a href="/ropa/ropa3.html" class="btn" id="btn-jean" style="transform: translate(-105px,140px);">Ver prenda</a>
         </div>
     <div id="ver-faldas" class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column align-items-center mb-4">
             <img src="/assets/img/falda.webp" alt="" id="img-faldas" class="img-fluid" style="margin-top: 140px;">
-            <a href="" style="text-decoration: none; color: black; font-family: cursive;">Vestidos </a>
-            <a href="" class="btn" id="btn-faldas"  style="transform: translate(-105px,140px);">Ver prenda</a>
+            <a href="/ropa/ropa4.html" style="text-decoration: none; color: black; font-family: cursive;">Vestidos</a>
+            <a href="/ropa/ropa4.html" class="btn" id="btn-faldas"  style="transform: translate(-105px,140px);">Ver prenda</a>
         </div>
     </div>s
 
@@ -135,7 +160,7 @@
                     &#10094;
                 </button>
 
-                <div class="overflow-hidden">
+                <div class="overflow-hidden" id="nuevos-lanzamientos">
                     <h1 style="text-align: center; font-family: cursive;margin-top: 25px; margin-bottom: 30px;">Nuevos
                         lanzamientos</h1>
                     <div class="d-flex carousel" style="transition: transform 0.5s ease;">
@@ -171,7 +196,7 @@
 
     <div class="registro text-center my-4" id="registrate">
         <img src="/assets/img/registrate.png" alt="Regístrate" class="img-fluid rounded shadow">
-        <a href="" id="btn-registrate"  class="btn" style="color: rgb(255, 255, 255); transform: translate(10px,-100px); font-size: 20px ; font-family: cursive;">Registrarte</a>
+        <a href="/assets/html/resgistro.html" id="btn-registrate"  class="btn" style="color: rgb(255, 255, 255); transform: translate(10px,-100px); font-size: 20px ; font-family: cursive;">Registrarte</a>
     </div>
     <hr>
     <div class="pagos text-center my-4" id="pagos-m">
