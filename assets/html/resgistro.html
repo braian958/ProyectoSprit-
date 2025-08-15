@@ -6,34 +6,41 @@
     <link rel="stylesheet" href="/assets/css/registro.css">
 </head>
 <body>
-    <img src="https://esprit.vtexassets.com/arquivos/ids/1503777-500-auto?v=638602881108070000&width=500&height=&autoaspect=true" alt="Logo de Sprint" class="logo">
-    <div class="registro-container">
-        <h2>Sprint</h2>
-        <hr> 
+<div class="registro-container">
+    <div class="registro-imagen">
+        <img src="https://esprit.vtexassets.com/arquivos/ids/1503777-500-auto?v=638602881108070000&width=500&height=&autoaspect=true" 
+            alt="Logo de Sprint" class="logo">
+    </div>
+
+    <div class="registro-formulario">
+        <h2> Registro Esprit</h2>
+        <hr>
         <form id="registroForm">
             <div class="form-group">
                 <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input type="text" id="nombre" name="nombre" >
             </div>
             <div class="form-group">
                 <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" >
             </div>
             <div class="form-group">
                 <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" >
                 <label for="Confirmar">Confirmar Contraseña</label>
-                <input type="password" id="confirmar" name="confirmar" required>
+                <input type="password" id="confirmar" name="confirmar" >
             </div>
             <div class="form-group">
                 <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" required>
+                <input type="tel" id="telefono" name="telefono" >
             </div>
             <button type="submit">Registrarse</button>
         </form>
         <div id="mensaje"></div>
-        <a class="login-link" href="#">¿Ya tienes cuenta? Inicia sesión</a> 
+        <a class="login-link" href="#">¿Ya tienes cuenta? Inicia sesión</a>
     </div>
+</div>
+
     <script src="/assets/js/resgistro.js"></script>
 </body>
 </html>
